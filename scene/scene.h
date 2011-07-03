@@ -11,7 +11,6 @@ public:
 	void Pan(int dx,int dy);
 	//Get SceneItem from the scene by a point (x,y)
 	SceneItem* GetSceneItem(int ix,int iy);
-//	SceneItem* GetSceneItem(
 
 };
 
