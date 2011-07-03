@@ -21,15 +21,15 @@ template<typename T>
 			{
 				return false;
 			}
-			bool IsInsects(self_type& another)const
+			bool IsIntersects(self_type& another)const
 			{
 				return false;
 			}
-			self_type& Insects(const self_type& another)
+			self_type& Intersects(const self_type& another)
 			{
 				return *this;
 			}
-			self_type& Union(const self_type& another)
+			self_type& Unite(const self_type& another)
 			{
 				return *this;
 			}
