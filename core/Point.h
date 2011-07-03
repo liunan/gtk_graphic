@@ -1,33 +1,47 @@
 #ifndef LN_POINT__H
 #define LN_POINT__H
+#include <config.h>
 
-namespace Graphic::Core
-{
-template<typename T>
-	class Point{
-	  typedef Point<T> self_type;
-	  public:
-		Point():m_x(0),m_y(0){}
-		Point(T x,T y):m_x(x),m_y(y){}
-	  public:
-		void SetPoint(T x,T y)
-	  {
+BEGIN_NAMESPACE
+
+class Point{	 
+public:
+	Point():m_x(0),m_y(0){}
+	Point(int x,int y):m_x(x),m_y(y){}
+public:
+	void SetPoint(int x,int y)
+	{
 		m_x = x;
 		m_y = y;
-	  }
-		T GetX()const{return m_x;}
-		T GetY()const{return m_y;}
-		self_type& operator = (const self_type& another)
-	  {
+	}
+	void SetX(int x){m_x = x;}
+	void SetY(int y){m_y = y;}
+	int GetX()const{return m_x;}
+	int GetY()const{return m_y;}
+	Point& operator = (const Point& another)
+	{
 		m_x = another.x;
 		m_y = another.y;
 		return *this;
-	  }
-	  private:
-		T m_x;
-		T m_y;
-	};
+	}
+	friend inline bool operator ==(const Point&,const Point);
+	friend inline bool operator !=(const Point&,const Point);
+private:
+	int m_x;
+	int m_y;
+};
 
+inline bool operator ==(const Point& pt1,const Point& pt2)
+{
+	return (pt1.m_x == pt2.m_x) && (pt1.m_y == pt2.m_y);
 }
+inline bool operator != (const Point& pt1,const Point& pt2)
+{
+	return (pt1.m_x != pt2.m_x) || (pt1.m_y != pt2.m_y);
+}
+
+
+END_NAMESPACE
 #endif
+
 
