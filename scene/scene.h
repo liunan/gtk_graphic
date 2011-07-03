@@ -9,7 +9,7 @@ public:
 	//ratio >0
 	void ZoomTo(unsigned ratio);
 	void Pan(int dx,int dy);
-	//获取指定位置的项
+	//Get SceneItem from the scene by a point (x,y)
 	SceneItem* GetSceneItem(int ix,int iy);
 //	SceneItem* GetSceneItem(
 
