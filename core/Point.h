@@ -20,8 +20,8 @@ public:
 	int GetY()const{return m_y;}
 	Point& operator = (const Point& another)
 	{
-		m_x = another.x;
-		m_y = another.y;
+		m_x = another.m_x;
+		m_y = another.m_y;
 		return *this;
 	}
 	friend inline bool operator ==(const Point&,const Point);
