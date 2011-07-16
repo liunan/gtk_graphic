@@ -14,5 +14,5 @@ int main()
   Rect r(100,100,150,200);
   cout<<r;
 
-	return 0;
+   return 0;
 }
